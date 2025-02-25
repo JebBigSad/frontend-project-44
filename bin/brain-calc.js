@@ -12,7 +12,7 @@ const getQuestionAndAnswer = () => {
 
     const question = `${num1} ${operation} ${num2}`;
 
-    const calculate = (op, n1, n2) => {
+    const calculate = (operation, n1, n2) => {
         if (operation === '+') return n1 + n2;
         if (operation === '-') return n1 - n2;
         if (operation === '*') return n1 * n2;
