@@ -23,6 +23,7 @@ const runGame = (gameDescription, getQuestionAndAnswer) => {
     }
 
     console.log(`Congratulations, ${name}!`);
+    
 };
 
 export default runGame;
