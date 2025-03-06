@@ -27,4 +27,4 @@ const gameDescription = 'What is the result of the expression?';
 
 runGame(gameDescription, getQuestionAndAnswer);
 
-export { runGame };
+export default runGame ;

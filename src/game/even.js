@@ -34,4 +34,4 @@ const brainEvenGame = () => {
     console.log(`Congratulations, ${name}! You won!`); 
 };
 
-export { brainEvenGame };
+export default brainEvenGame ;

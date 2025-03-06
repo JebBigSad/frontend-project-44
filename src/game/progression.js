@@ -30,4 +30,4 @@ const getQuestionAndAnswer = () => {
 const gameDescription = 'What number is missing in the progression?';
 runGame(gameDescription, getQuestionAndAnswer);
 
-export {runGame};
+export default runGame;
