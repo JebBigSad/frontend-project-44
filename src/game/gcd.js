@@ -1,8 +1,7 @@
-#!/usr/bin/env node
-
 import runGame from '../index.js';
+import getRandomInt from '../utils.js';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
 
 const gcd = (a, b) => {
     if (b === 0) return a;

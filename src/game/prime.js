@@ -1,8 +1,6 @@
-#!/usr/bin/env node
-
 import runGame from '../index.js';
+import getRandomInt from '../utils.js';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const Prime = (number) => {
     if (number <= 1){

@@ -1,8 +1,6 @@
-#!/usr/bin/env node
-
 import runGame from '../index.js';
+import getRandomInt from '../utils.js';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const generateProgression = (length, start, step) => {
     const progression = [];
@@ -28,6 +26,7 @@ const getQuestionAndAnswer = () => {
 };
 
 const gameDescription = 'What number is missing in the progression?';
+
 runGame(gameDescription, getQuestionAndAnswer);
 
 export default runGame;
