@@ -2,4 +2,4 @@
 
 import runGame from "../src/game/prime.js";
 
-runGame
+runGame()

@@ -26,6 +26,6 @@ const calculate = (num1, num2, operator) => {
 
 const gameDescription = 'What is the result of the expression?';
 
-runGame(gameDescription, getQuestionAndAnswer);
-
-export default runGame;
+export default () => {
+    runGame(gameDescription, getQuestionAndAnswer);
+};

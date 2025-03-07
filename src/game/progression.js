@@ -27,6 +27,6 @@ const getQuestionAndAnswer = () => {
 
 const gameDescription = 'What number is missing in the progression?';
 
-runGame(gameDescription, getQuestionAndAnswer);
-
-export default runGame;
+export default () => {
+    runGame(gameDescription, getQuestionAndAnswer);
+};
