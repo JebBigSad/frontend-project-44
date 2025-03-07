@@ -2,4 +2,4 @@
 
 import runGame from '../src/game/Even.js'; 
 
-runGame;
+runGame();
