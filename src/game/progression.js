@@ -21,7 +21,7 @@ const getQuestionAndAnswer = () => {
 
   progression[Index] = '..'
   const question = progression.join(' ')
-  return {question, answer: hiddenValue.toString()}
+  return { question, answer: hiddenValue.toString() }
 }
 
 const gameDescription = 'What number is missing in the progression?'
