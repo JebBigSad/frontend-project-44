@@ -2,4 +2,4 @@
 
 import runGame from "../src/game/gcd.js";
 
-runGame()
+runGame();
