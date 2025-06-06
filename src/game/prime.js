@@ -1,7 +1,7 @@
 import runGame from '../index.js'
 import getRandomInt from '../utils.js'
 
-const Prime = (number) => {
+const Prime = number => {
   if (number <= 1) {
     return false
   }
