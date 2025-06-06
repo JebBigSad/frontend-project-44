@@ -1,11 +1,11 @@
 import runGame from '../index.js'
 import getRandomInt from '../utils.js'
 
-const Prime = (number) => {
+const Prime = number => {
   if (number <= 1) {
     return false
   }
-  for (let i = 2; i < number; i ++){
+  for (let i = 2; i < number; i++) {
     if (number % i === 0) {
       return false
     }

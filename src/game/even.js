@@ -1,7 +1,7 @@
 import getRandomInt from '../utils.js'
 import runGame from '../index.js'
 
-const isEven = (number) => number % 2 === 0
+const isEven = number => number % 2 === 0
 
 const getQuestionAndAnswer = () => {
   const number = getRandomInt(1, 100)
