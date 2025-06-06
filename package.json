@@ -18,11 +18,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@stylistic/eslint-plugin": "^4.4.1",
+    "eslint-plugin-import": "^2.31.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@eslint/js": "^9.20.0",
-    "eslint": "^9.20.1",
-    "globals": "^16.0.0"
+    "@eslint/js": "^9.28.0",
+    "eslint": "^9.28.0",
+    "globals": "^16.2.0"
   }
 }

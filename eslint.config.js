@@ -1,32 +1,55 @@
 import globals from 'globals'
 import pluginJs from '@eslint/js'
-import tseslint from 'typescript-eslint'
 import stylistic from '@stylistic/eslint-plugin'
-// import { Linter } from 'eslint'
+import importPlugin from 'eslint-plugin-import'
 
 export default [
-  stylistic.configs.recommended,
+  // Базовые рекомендуемые правила
   pluginJs.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+  
+  // Настройки для JavaScript файлов
   {
-    files: [
-      '**/*.{js,ts,tsx}',
-    ],
-  },
-  {
-    ignores: ['dist/'],
-  },
-  {
+    files: ['**/*.js'],
     languageOptions: {
-      globals: globals.node,
+      globals: {
+        ...globals.node,
+        ...globals.jest,
+      },
       parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        ecmaVersion: 'latest',
+        sourceType: 'module',
       },
     },
+    plugins: {
+      '@stylistic': stylistic,
+      'import': importPlugin,
+    },
     rules: {
-      '@typescript-eslint/no-unused-vars': 'off',
+      // Стилистические правила
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/semi': ['error', 'never'],
+      '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/eol-last': ['error', 'always'],
+      '@stylistic/no-multiple-empty-lines': ['error', { max: 1 }],
+      
+      // Правила импортов
+      'import/extensions': ['error', 'always'],
+      'import/no-unresolved': 'off',
+      'import/no-extraneous-dependencies': 'off',
+      
+      // Другие правила
+      'no-underscore-dangle': ['error', { 
+        allow: ['__filename', '__dirname'] 
+      }],
+      'no-console': 'off',
     },
   },
-] // satisfies Linter.Config[]
+  
+  // Игнорируемые файлы/папки
+  {
+    ignores: [
+      'node_modules/',
+      'dist/',
+    ],
+  },
+]
